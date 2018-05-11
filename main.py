@@ -28,3 +28,17 @@ body = htmlChildren[3]
 p = list(body.children)[1]
 # once you have isolated the tag, can use `get_text` to extract all of the text inside the tag
 print(p.get_text())
+
+print("*"*50)
+# What we did above was useful for figuring out how to navigate a page, but it took a lot of commands to do something fairly simple. If we want to extract a single tag, we can instead use the `find_all` method, which will find all the instances of a tag on a page.
+
+# .find_all('p') => returns a list of find all the instances of a `p` on a page.
+# p = [<p>Here is some simple content for this page.</p>]
+all_p = soup.find_all('p')
+# extractTextInP = ['Here is some simple content for this page.']
+extractTextInP = [text.get_text() for text in all_p]
+
+# .find() => return the first instance of a tag
+# first_p = <p>Here is some simple content for this page.</p>
+first_p = soup.find('p')
+

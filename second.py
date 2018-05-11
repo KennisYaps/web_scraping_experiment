@@ -16,3 +16,10 @@ outerText = soup.find_all(class_="outer-text")
 # search for elements by id
 id_first = soup.find_all(id="first")
 print(id_first)
+
+
+print("-"*100)
+# Using CSS selectors
+# to find all the `p` tags in the page that are inside of a `div`
+p = soup.select("div p")
+print(p)

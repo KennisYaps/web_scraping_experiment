@@ -42,3 +42,4 @@ extractTextInP = [text.get_text() for text in all_p]
 # first_p = <p>Here is some simple content for this page.</p>
 first_p = soup.find('p')
 
+
